@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sabareesh APK — Full Stack Developer</title>
+  <meta name="description" content="Portfolio of Ashtakala P K Sabareesh, Full Stack Developer specializing in React.js and Django." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="styles.css">
+
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Figtree:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+</head>
+<body>
+
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>APK<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about"   class="nav-link">About</a></li>
+        <li><a href="#skills"  class="nav-link">Skills</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#certifications" class="nav-link">Certs</a></li>
+        <li><a href="#resume"  class="nav-link">Resume</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+          <i class="fa-solid fa-sun" id="themeIcon"></i>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-overlay" id="mobileOverlay">
+    <ul class="mobile-links">
+      <li><a href="#about"   class="mob-link">About</a></li>
+      <li><a href="#skills"  class="mob-link">Skills</a></li>
+      <li><a href="#experience" class="mob-link">Experience</a></li>
+      <li><a href="#projects" class="mob-link">Projects</a></li>
+      <li><a href="#certifications" class="mob-link">Certs</a></li>
+      <li><a href="#resume"  class="mob-link">Resume</a></li>
+      <li><a href="#contact" class="mob-link">Contact</a></li>
+    </ul>
+  </div>
+
+  <!-- ========== HERO ========== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="particle p1"></div>
+      <div class="particle p2"></div>
+      <div class="particle p3"></div>
+      <div class="particle p4"></div>
+      <div class="grid-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-greeting reveal-up" style="--d:0s">Hello, World!</p>
+      <h1 class="hero-name reveal-up" style="--d:.1s">
+        I'm <span class="highlight">Ashtakala <br>P K <br>Sabareesh </span>
+      </h1> 
+      <h2 class="hero-title reveal-up" style="--d:.2s">
+        <span class="typing-text" id="typingText"></span><span class="cursor-blink">|</span>
+      </h2>
+      <p class="hero-desc reveal-up" style="--d:.3s">
+        Full-stack developer specializing in <strong>React.js</strong> and <strong>Django</strong>.
+        Building scalable web &amp; mobile apps with clean code and a sharp eye for UX.
+        Currently shipping features at <strong>Ascendum Solutions, Bangalore</strong>.
+      </p>
+      <div class="hero-actions reveal-up" style="--d:.4s">
+        <a href="#contact" class="btn btn-primary">
+          <span>Get In Touch</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+        <a href="#projects" class="btn btn-ghost">
+          <span>View Projects</span>
+        </a>
+      </div>
+      <div class="hero-socials reveal-up" style="--d:.5s">
+        <a href="https://github.com/sabareeshapk" target="_blank" class="social-icon" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/ashtakala-sabareesh-28aa9304" target="_blank" class="social-icon" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:sabareesh2003@gmail.com" class="social-icon" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- Photo -->
+    <!-- <div class="hero-avatar reveal-right" style="--d:.3s">
+      <div class="avatar-frame">
+        <div class="avatar-placeholder" id="photoPlaceholder">
+          <i class="fa-solid fa-user"></i>
+          <p>Upload Your Photo</p>
+          <label for="photoInput" style="font-size:0.72rem;color:var(--accent);cursor:pointer;border:1px solid rgba(0,212,170,0.3);padding:0.3rem 0.8rem;border-radius:4px;">+ Add Photo</label>
+          <input type="file" id="photoInput" accept="image/*" style="display:none" />
+        </div>
+        <img id="uploadedPhoto" src="" alt="Sabareesh APK" style="display:none;width:100%;height:100%;object-fit:cover;border-radius:var(--radius);position:relative;z-index:1;" />
+        <div class="avatar-ring r1"></div>
+        <div class="avatar-ring r2"></div>
+        <div class="avatar-glow"></div>
+      </div>
+    </div> -->
+
+    <a href="#about" class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </a>
+  </section>
+
+  <!-- ========== ABOUT ========== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-tag reveal-up">01. About Me</div>
+      <h2 class="section-title reveal-up">Who I Am</h2>
+
+      <div class="about-grid">
+        <div class="about-text reveal-left">
+          <p>
+            Hi! I'm <strong>Ashtakala P K Sabareesh</strong>, a passionate <strong>Full Stack Developer</strong>
+            based in <strong>Bangalore</strong>  I love building modern,
+            high-performance web and mobile applications with clean code and obsessive attention to detail.
+          </p>
+          <p>
+            I specialize in <strong>React.js, React Native, and Django</strong>, with solid experience
+            integrating REST APIs, managing application state, and delivering production-ready features on time.
+            I'm currently a <strong>Software Trainee at Ascendum Solutions</strong>, contributing across active sprint cycles
+            in a collaborative 6-person engineering team.
+          </p>
+          <p>
+            I bring strong fundamentals in <strong>Data Structures &amp; Algorithms</strong> and
+            <strong>Object-Oriented Programming</strong>, and I'm always leveling up — most recently
+            with certifications from Microsoft Azure, Google, and IBM. When I'm not coding, I'm exploring
+            new tech and building side projects that solve real problems. 
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="hl-num">2+</span>
+              <span class="hl-label">Sprints Shipped</span>
+            </div>
+            <div class="highlight-item">
+              <span class="hl-num">10+</span>
+              <span class="hl-label">Bugs Resolved</span>
+            </div>
+            <div class="highlight-item">
+              <span class="hl-num">5+</span>
+              <span class="hl-label">APIs Integrated</span>
+            </div>
+            <div class="highlight-item">
+              <span class="hl-num">81%</span>
+              <span class="hl-label">B.Tech Score</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-details reveal-right">
+          <div class="detail-card">
+            <h3>Quick Info</h3>
+            <ul class="detail-list">
+              <li><i class="fa-solid fa-user"></i><span><strong>Name:</strong> Ashtakala P K Sabareesh</span></li>
+              <li><i class="fa-solid fa-location-dot"></i><span><strong>Location:</strong> Bangalore</span></li>
+              <li><i class="fa-solid fa-envelope"></i>
+                <span><strong>Email:</strong>
+                  <a href="mailto:sabareesh2003@gmail.com">sabareesh2003@gmail.com</a>
+                </span>
+              </li>
+              <li><i class="fa-solid fa-phone"></i><span><strong>Phone:</strong> +91-7268882888</span></li>
+              <li><i class="fa-solid fa-briefcase"></i><span><strong>Current Role:</strong> Software Trainee @ Ascendum Solutions</span></li>
+              <li><i class="fa-solid fa-graduation-cap"></i><span><strong>Education:</strong> B.Tech CSE — Narayana Engineering College (81%)</span></li>
+              <li><i class="fa-brands fa-github"></i>
+                <span><strong>GitHub:</strong>
+                  <a href="https://github.com/sabareeshapk" target="_blank">sabareeshapk</a>
+                </span>
+              </li>
+              <li><i class="fa-brands fa-linkedin"></i>
+                <span><strong>LinkedIn:</strong>
+                  <a href="https://linkedin.com/in/ashtakala-sabareesh-28aa9304" target="_blank">ashtakala-sabareesh</a>
+                </span>
+              </li>
+            </ul>
+            <a href="#contact" class="btn btn-primary btn-sm">Hire Me</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SKILLS ========== -->
+  <section class="section section-alt" id="skills">
+    <div class="container">
+      <div class="section-tag reveal-up">02. Skills</div>
+      <h2 class="section-title reveal-up">What I Work With</h2>
+      <p class="section-sub reveal-up">Technologies and tools I use to bring ideas to life.</p>
+
+      <div class="skills-categories">
+
+        <!-- Frontend -->
+        <div class="skill-group reveal-up" style="--d:.05s">
+          <div class="skill-group-header">
+            <i class="fa-solid fa-palette"></i>
+            <h3>Frontend</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>React.js</span><span class="sb-pct">90%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-width="90"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>React Native</span><span class="sb-pct">85%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-width="85"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>HTML / CSS</span><span class="sb-pct">95%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-width="95"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>Tailwind CSS</span><span class="sb-pct">88%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-width="88"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-group reveal-up" style="--d:.1s">
+          <div class="skill-group-header">
+            <i class="fa-solid fa-server"></i>
+            <h3>Backend &amp; Database</h3>
+          </div>
+          <div class="skill-bars">
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>Django</span><span class="sb-pct">83%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-width="83"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>REST APIs / Axios</span><span class="sb-pct">88%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-width="88"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>Python</span><span class="sb-pct">82%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-width="82"></div></div>
+            </div>
+            <div class="skill-bar-item">
+              <div class="sb-label"><span>SQL</span><span class="sb-pct">78%</span></div>
+              <div class="sb-track"><div class="sb-fill" data-width="78"></div></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Languages & Tools -->
+        <div class="skill-group reveal-up" style="--d:.15s">
+          <div class="skill-group-header">
+            <i class="fa-solid fa-wrench"></i>
+            <h3>Languages &amp; Tools</h3>
+          </div>
+          <div class="skill-pills">
+            <span class="skill-pill"><i class="fa-brands fa-java"></i> Java</span>
+            <span class="skill-pill"><i class="fa-brands fa-python"></i> Python</span>
+            <span class="skill-pill"><i class="fa-brands fa-js"></i> JavaScript</span>
+            <span class="skill-pill"><i class="fa-brands fa-git-alt"></i> Git</span>
+            <span class="skill-pill"><i class="fa-brands fa-github"></i> GitHub</span>
+            <span class="skill-pill"><i class="fa-solid fa-vial"></i> Postman</span>
+            <span class="skill-pill"><i class="fa-solid fa-code"></i> VS Code</span>
+            <span class="skill-pill"><i class="fa-solid fa-diagram-project"></i> DSA</span>
+            <span class="skill-pill"><i class="fa-solid fa-cubes"></i> OOP</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== EXPERIENCE ========== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-tag reveal-up">03. Experience</div>
+      <h2 class="section-title reveal-up">Where I've Worked</h2>
+      <p class="section-sub reveal-up">Real-world experience building and shipping production software.</p>
+
+      <div style="display:flex;flex-direction:column;gap:2rem;margin-top:1rem;">
+
+        <!-- Ascendum -->
+        <div class="detail-card reveal-up" style="--d:.05s;padding:2.5rem;position:relative;overflow:hidden;">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;">Mar 2026 — Present · Bangalore</div>
+              <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:0.25rem;">Software Trainee — Apprentice</h3>
+              <span style="font-size:0.9rem;color:var(--muted2);">Ascendum Solutions</span>
+            </div>
+            <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--accent);background:var(--accent-glow);border:1px solid rgba(0,212,170,0.25);padding:0.3rem 0.8rem;border-radius:999px;white-space:nowrap;">🟢 Current Role</span>
+          </div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+            <li style="display:flex;gap:0.75rem;font-size:0.9rem;color:var(--muted2);line-height:1.7;"><span style="color:var(--accent);flex-shrink:0;margin-top:2px;">→</span>Implemented new features across 2+ active sprint cycles in a team of 6 developers, consistently meeting sprint deadlines.</li>
+            <li style="display:flex;gap:0.75rem;font-size:0.9rem;color:var(--muted2);line-height:1.7;"><span style="color:var(--accent);flex-shrink:0;margin-top:2px;">→</span>Collaborated with senior developers to build and optimize scalable React.js components, improving state management and reducing unnecessary re-renders.</li>
+            <li style="display:flex;gap:0.75rem;font-size:0.9rem;color:var(--muted2);line-height:1.7;"><span style="color:var(--accent);flex-shrink:0;margin-top:2px;">→</span>Debugged and resolved 10+ reported UI and logic issues, improving application stability and user experience.</li>
+            <li style="display:flex;gap:0.75rem;font-size:0.9rem;color:var(--muted2);line-height:1.7;"><span style="color:var(--accent);flex-shrink:0;margin-top:2px;">→</span>Maintained version control using Git with branching, pull requests, and code reviews in a collaborative team workflow.</li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;">
+            <span class="project-stack"><span>React.js</span></span>
+            <span class="project-stack"><span>Git</span></span>
+            <span class="project-stack"><span>State Management</span></span>
+            <span class="project-stack"><span>Agile / Sprints</span></span>
+          </div>
+        </div>
+
+        <!-- Kyndrex -->
+        <div class="detail-card reveal-up" style="--d:.1s;padding:2.5rem;">
+          <div style="display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:1rem;margin-bottom:1.5rem;">
+            <div>
+              <div style="font-family:var(--font-mono);font-size:0.7rem;color:var(--accent);letter-spacing:1px;text-transform:uppercase;margin-bottom:0.4rem;">Mar 2025 — Jun 2025 · 3 Months</div>
+              <h3 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:0.25rem;">Web Developer Intern</h3>
+              <span style="font-size:0.9rem;color:var(--muted2);">Kyndrex Technologies</span>
+            </div>
+            <span style="font-family:var(--font-mono);font-size:0.68rem;color:var(--muted);background:var(--surface);border:1px solid var(--border);padding:0.3rem 0.8rem;border-radius:999px;white-space:nowrap;">Internship</span>
+          </div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+            <li style="display:flex;gap:0.75rem;font-size:0.9rem;color:var(--muted2);line-height:1.7;"><span style="color:var(--accent);flex-shrink:0;margin-top:2px;">→</span>Built and optimized 5+ responsive frontend components using React.js, improving cross-device compatibility and page performance.</li>
+            <li style="display:flex;gap:0.75rem;font-size:0.9rem;color:var(--muted2);line-height:1.7;"><span style="color:var(--accent);flex-shrink:0;margin-top:2px;">→</span>Integrated 3 REST APIs using Axios to create dynamic, data-driven interfaces with efficient state management using React hooks.</li>
+            <li style="display:flex;gap:0.75rem;font-size:0.9rem;color:var(--muted2);line-height:1.7;"><span style="color:var(--accent);flex-shrink:0;margin-top:2px;">→</span>Debugged UI rendering issues, reducing component load time and improving overall application responsiveness.</li>
+            <li style="display:flex;gap:0.75rem;font-size:0.9rem;color:var(--muted2);line-height:1.7;"><span style="color:var(--accent);flex-shrink:0;margin-top:2px;">→</span>Worked in a 4-member team to deliver feature releases on schedule within a 3-month internship period.</li>
+          </ul>
+          <div style="display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:1.5rem;">
+            <span class="project-stack"><span>React.js</span></span>
+            <span class="project-stack"><span>Axios</span></span>
+            <span class="project-stack"><span>REST APIs</span></span>
+            <span class="project-stack"><span>React Hooks</span></span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== PROJECTS ========== -->
+  <section class="section section-alt" id="projects">
+    <div class="container">
+      <div class="section-tag reveal-up">04. Projects</div>
+      <h2 class="section-title reveal-up">Things I've Built</h2>
+      <p class="section-sub reveal-up">Real-world projects demonstrating full-stack and mobile development skills.</p>
+
+      <div class="projects-grid">
+
+        <!-- AgriVision -->
+        <div class="project-card featured reveal-up" style="--d:.05s">
+          <div class="project-featured-tag">Featured</div>
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-seedling"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/sabareeshapk" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">AgriVision</h3>
+          <p class="project-desc">
+            Agriculture Analysis Application — a cross-platform mobile app for live crop, video, and image analysis.
+            Tested on 5+ Android devices with under 2s average API response time.
+          </p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:0.5rem;">
+            <li style="font-size:0.82rem;color:var(--muted);line-height:1.6;padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-size:0.55rem;top:0.45rem;">◆</span>Built with React Native (frontend) and Django (backend); tested on 5+ Android devices.</li>
+            <li style="font-size:0.82rem;color:var(--muted);line-height:1.6;padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-size:0.55rem;top:0.45rem;">◆</span>Designed 4+ REST API endpoints for real-time crop analysis, achieving &lt;2s response time.</li>
+            <li style="font-size:0.82rem;color:var(--muted);line-height:1.6;padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-size:0.55rem;top:0.45rem;">◆</span>Created a reusable component library, reducing code duplication by ~30%.</li>
+            <li style="font-size:0.82rem;color:var(--muted);line-height:1.6;padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-size:0.55rem;top:0.45rem;">◆</span>Responsive layouts ensuring consistent UI/UX across multiple screen sizes and platforms.</li>
+          </ul>
+          <div class="project-stack">
+            <span>React Native</span><span>Django</span><span>REST API</span><span>Axios</span><span>Python</span>
+          </div>
+        </div>
+
+        <!-- LMS -->
+        <div class="project-card reveal-up" style="--d:.1s">
+          <div class="project-header">
+            <div class="project-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/sabareeshapk" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
+          </div>
+          <h3 class="project-title">Learning Management System</h3>
+          <p class="project-desc">
+            Full-featured LMS frontend with role-based access control for students, instructors, and admins — built entirely in React.js.
+          </p>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;margin-bottom:0.5rem;">
+            <li style="font-size:0.82rem;color:var(--muted);line-height:1.6;padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-size:0.55rem;top:0.45rem;">◆</span>Role-based access control (student / instructor / admin) using React Router.</li>
+            <li style="font-size:0.82rem;color:var(--muted);line-height:1.6;padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-size:0.55rem;top:0.45rem;">◆</span>Interactive components for course management, assignment submission, and progress tracking.</li>
+            <li style="font-size:0.82rem;color:var(--muted);line-height:1.6;padding-left:1rem;position:relative;"><span style="position:absolute;left:0;color:var(--accent);font-size:0.55rem;top:0.45rem;">◆</span>Clean UI with Tailwind CSS; optimized with lazy loading and memoization for fast load times.</li>
+          </ul>
+          <div class="project-stack">
+            <span>React.js</span><span>React Router</span><span>Tailwind CSS</span><span>JavaScript</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="projects-cta reveal-up">
+        <a href="https://github.com/sabareeshapk" target="_blank" class="btn btn-ghost">
+          <i class="fa-brands fa-github"></i>
+          <span>View All on GitHub</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CERTIFICATIONS ========== -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-tag reveal-up">05. Certifications</div>
+      <h2 class="section-title reveal-up">Credentials</h2>
+      <p class="section-sub reveal-up">Industry certifications from top global technology companies.</p>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1.5rem;margin-top:1rem;">
+
+        <!-- Azure -->
+        <div class="detail-card reveal-up" style="--d:.05s;text-align:center;padding:2rem 1.5rem;">
+          <div class="cert-icon azure">AZ</div>
+          <h3 class="cert-title">Azure AI Fundamentals</h3>
+          <div class="cert-sub">Microsoft · AI-900</div>
+        </div>
+
+        <!-- Google -->
+        <div class="detail-card reveal-up" style="--d:.1s;text-align:center;padding:2rem 1.5rem;">
+          <div class="cert-icon google">AI</div>
+          <h3 class="cert-title">Google AI Essentials</h3>
+          <div class="cert-sub">Google</div>
+        </div>
+
+        <!-- Cybersecurity -->
+        <div class="detail-card reveal-up" style="--d:.15s;text-align:center;padding:2rem 1.5rem;">
+          <div class="cert-icon cyber">SEC</div>
+          <h3 class="cert-title">Cybersecurity Basics</h3>
+          <div class="cert-sub">IBM</div>
+        </div>
+
+        <!-- Python & SQL -->
+        <div class="detail-card reveal-up" style="--d:.2s;text-align:center;padding:2rem 1.5rem;">
+          <div class="cert-icon python-sql">PySQL</div>
+          <h3 class="cert-title">Python & SQL</h3>
+          <div class="cert-sub">ExcelR</div>
+        </div>
+
+</div>
+    </div>
+  </section>
+
+  <!-- ========== EDUCATION ========== -->
+  <section class="section section-alt" id="education">
+    <div class="container">
+      <div class="section-tag reveal-up">06. Education</div>
+      <h2 class="section-title reveal-up">Academic Background</h2>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;margin-top:2rem;">
+
+        <div class="detail-card reveal-up" style="--d:.05s;padding:2rem;">
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent);background:var(--accent-glow);border:1px solid rgba(0,212,170,0.2);padding:0.2rem 0.65rem;border-radius:999px;display:inline-block;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem;">B.Tech · 2025</div>
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;margin-bottom:0.4rem;line-height:1.2;">Computer Science &amp; Engineering</h3>
+          <p style="font-size:0.85rem;color:var(--muted);margin-bottom:1rem;">Narayana Engineering College<br/>Graduated May 2025</p>
+          <div style="font-family:var(--font-display);font-size:2.8rem;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">81%</div>
+          <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;">Aggregate Score</div>
+        </div>
+
+        <div class="detail-card reveal-up" style="--d:.1s;padding:2rem;">
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent);background:var(--accent-glow);border:1px solid rgba(0,212,170,0.2);padding:0.2rem 0.65rem;border-radius:999px;display:inline-block;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem;">Intermediate · MPC</div>
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;margin-bottom:0.4rem;line-height:1.2;">MPC</h3>
+          <p style="font-size:0.85rem;color:var(--muted);margin-bottom:1rem;">Viswasai Junior College<br/>Andhra Pradesh</p>
+          <div style="font-family:var(--font-display);font-size:2.8rem;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">90.7%</div>
+          <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;">Aggregate Score</div>
+        </div>
+
+        <div class="detail-card reveal-up" style="--d:.15s;padding:2rem;">
+          <div style="font-family:var(--font-mono);font-size:0.65rem;color:var(--accent);background:var(--accent-glow);border:1px solid rgba(0,212,170,0.2);padding:0.2rem 0.65rem;border-radius:999px;display:inline-block;letter-spacing:1px;text-transform:uppercase;margin-bottom:1rem;">SSC · Grade 10</div>
+          <h3 style="font-family:var(--font-display);font-size:1.15rem;margin-bottom:0.4rem;line-height:1.2;">Secondary School Certificate</h3>
+          <p style="font-size:0.85rem;color:var(--muted);margin-bottom:1rem;">Sri Netaji MSR Pilot High School<br/>Andhra Pradesh</p>
+          <div style="font-family:var(--font-display);font-size:2.8rem;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;">9.8</div>
+          <div style="font-family:var(--font-mono);font-size:0.62rem;color:var(--muted);letter-spacing:1px;text-transform:uppercase;">CGPA</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== RESUME ========== -->
+  <section class="section" id="resume">
+    <div class="container">
+      <div class="section-tag reveal-up">07. Resume</div>
+      <h2 class="section-title reveal-up">My Resume</h2>
+
+      <div class="resume-block reveal-up">
+        <div class="resume-icon">
+          <i class="fa-solid fa-file-lines"></i>
+        </div>
+        <div class="resume-text">
+          <h3>Want the full picture?</h3>
+          <p>
+            Download or view my complete resume — it covers my experience at Ascendum Solutions &amp; Kyndrex Technologies,
+            all my projects, certifications, and education in detail.
+          </p>
+          <div class="resume-actions">
+            <a href="SabareeshAPKResume.pdf" target="_blank" class="btn btn-primary" id="viewResumeBtn">
+              <i class="fa-solid fa-eye"></i>
+              <span>View Resume</span>
+            </a>
+            <a href="SabareeshAPKResume.pdf" download="SabareeshAPK_Resume.pdf" class="btn btn-ghost" id="downloadResumeBtn">
+              <i class="fa-solid fa-download"></i>
+              <span>Download PDF</span>
+            </a>
+          </div>
+      
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== CONTACT ========== -->
+  <section class="section section-alt" id="contact">
+    <div class="container">
+      <div class="section-tag reveal-up">08. Contact</div>
+      <h2 class="section-title reveal-up">Let's Work Together</h2>
+      <p class="section-sub reveal-up">Have a project, opportunity, or just want to say hi? My inbox is always open.</p>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal-left">
+          <div class="contact-card">
+            <h3>Get in Touch</h3>
+            <div class="contact-items">
+              <a href="mailto:sabareesh2003@gmail.com" class="contact-item">
+                <div class="ci-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="ci-text">
+                  <span class="ci-label">Email</span>
+                  <span class="ci-value">sabareesh2003@gmail.com</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square ci-arrow"></i>
+              </a>
+              <div class="contact-item no-link">
+                <div class="ci-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="ci-text">
+                  <span class="ci-label">Phone</span>
+                  <span class="ci-value">+91-7268882888</span>
+                </div>
+              </div>
+              <div class="contact-item no-link">
+                <div class="ci-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="ci-text">
+                  <span class="ci-label">Location</span>
+                  <span class="ci-value">Bangalore</span>
+                </div>
+              </div>
+              <a href="https://linkedin.com/in/ashtakala-sabareesh-28aa9304" target="_blank" class="contact-item">
+                <div class="ci-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                <div class="ci-text">
+                  <span class="ci-label">LinkedIn</span>
+                  <span class="ci-value">ashtakala-sabareesh</span>
+                </div>
+                <i class="fa-solid fa-arrow-up-right-from-square ci-arrow"></i>
+              </a>
+            </div>
+            <div class="contact-socials">
+              <a href="https://github.com/sabareeshapk" target="_blank" class="social-icon"><i class="fa-brands fa-github"></i></a>
+              <a href="https://linkedin.com/in/ashtakala-sabareesh-28aa9304" target="_blank" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a href="mailto:sabareesh2003@gmail.com" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-right">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your full name" autocomplete="name" />
+              <span class="form-error" id="nameError"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+              <span class="form-error" id="emailError"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="Project inquiry / Job opportunity / Collaboration" />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or opportunity..."></textarea>
+              <span class="form-error" id="messageError"></span>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span id="submitText">Send Message</span>
+              <i class="fa-solid fa-paper-plane" id="submitIcon"></i>
+            </button>
+            <div class="form-success" id="formSuccess">
+              <i class="fa-solid fa-circle-check"></i>
+              Message sent! Sabareesh will get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-logo">
+          <span class="logo-bracket">&lt;</span>APK<span class="logo-bracket">/&gt;</span>
+        </div>
+        <p class="footer-copy">
+          Designed &amp; Built by <strong>Ashtakala P K Sabareesh</strong> · © <span id="year"></span> All rights reserved.
+        </p>
+        <div class="footer-socials">
+          <a href="https://github.com/sabareeshapk" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/ashtakala-sabareesh-28aa9304" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="mailto:sabareesh2003@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+    <script src="script.js"></script>
+  
+</body>
+</html>
